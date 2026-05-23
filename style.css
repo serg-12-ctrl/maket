@@ -1,252 +1,336 @@
-/* --- 1. СБРОС СТИЛЕЙ БРАУЗЕРА --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мой сайт</title>
+    <style>
+      /* --- 1. СБРОС СТИЛЕЙ БРАУЗЕРА --- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-body {
-  background: #FFFFFF;
-  width: 100%;
-  min-height: 100vh;
-  font-family: 'OpenSans', sans-serif, Arial; /* Если шрифта OpenSans нет в системе, включится Arial */
-}
+      body {
+        background: #FFFFFF;
+        width: 100%;
+        min-height: 100vh;
+        font-family: 'Open Sans', sans-serif, Arial;
+        color: #48555B;
+      }
 
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
 
-/* --- 2. HEADER (ШАПКА) --- */
-.header {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-}
+      /* --- 2. HEADER --- */
+      .header {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+      }
 
-/* --- 3. NAVBAR (МЕНЮ) --- */
-.navbar {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;            
-  width: 100%;
-  max-width: 1440px;              
-  height: 65px;                   
-  margin: 0 auto;                 
-  padding: 24px 250px; 
-}
+      /* --- 3. NAVBAR (МЕНЮ) --- */
+      .navbar {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;            
+        width: 100%;
+        max-width: 1440px;              
+        height: 65px;                   
+        margin: 0 auto;                 
+        padding: 0 40px; 
+      }
 
-.navbar-logo {
-  width: 79.53px;
-  height: 18px;
-}
+      .navbar-logo {
+        width: 79.53px;
+        height: 18px;
+        object-fit: contain;
+      }
 
-.nav-links {
-  display: flex;
-  gap: 32px;                      
-}
+      .nav-links {
+        display: flex;
+        gap: 32px;                      
+      }
 
-.nav-item {
-  text-decoration: none;          
-  color: #000000;                 
-  font-size: 16px;                
-  font-weight: 500;               
-  transition: color 0.3s ease; 
-}
+      .nav-item {
+        text-decoration: none;          
+        color: #000000;                 
+        font-size: 16px;                
+        font-weight: 500;               
+        transition: color 0.3s ease; 
+      }
 
-.nav-item:hover {
-  color: #00A4E5 !important;
-  text-decoration: underline !important;
-}
+      .nav-item:hover {
+        color: #00A4E5 !important;
+        text-decoration: underline !important;
+      }
 
-/* --- 4. ОСНОВНОЙ КОНТЕНТ --- */
-.content {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
+      /* --- 4. ОСНОВНОЙ КОНТЕНТ --- */
+      .content {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
 
-/* --- 5. БЛОК ABOUT (О НАШЕЙ ИСТОРИИ) --- */
-.about {
-  display: flex;
-  flex-direction: column;   
-  align-items: center;      
-  width: 100%;
-  max-width: 1440px;              
-  margin: 60px auto;              
-  padding: 0 40px;                
-}
+      /* --- 5. БЛОК ABOUT --- */
+      .about {
+        display: flex;
+        flex-direction: column;   
+        align-items: center;      
+        width: 100%;
+        max-width: 1440px;              
+        margin: 60px auto;              
+        padding: 0 40px;                
+      }
 
-.about-title {
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 2.30625px;
-  color: #48555B;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 8px;      
-}
+      .about-title {
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2.30625px;
+        color: #48555B;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 8px;      
+      }
 
-.about-line {
-  display: block;
-  width: 50px;
-  height: 2px;
-  background-color: #00A4E5;
-  margin: 0 auto 40px auto; 
-}
+      .about-line {
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: #00A4E5;
+        margin: 0 auto 40px auto; 
+      }
 
-.about-row {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 60px;                
-}
+      .about-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;                      
+      }
 
-/* Левая часть (Блок с двумя текстами) */
-.about-content {
-  flex: 0 0 405px;          
-  display: flex;
-  flex-direction: column;   
-  gap: 24px; /* Расстояние между about-text1 и about-text */
-}
+      /* Левая часть (Текст) */
+      .about-content {
+        flex: 0 0 405px;          
+        display: flex;
+        flex-direction: column;   
+        gap: 24px; 
+      }
 
-.about-text, .about-text1 {
-  display: block;
-  width: 100%;
-  max-width: 405.08px;            
-  font-size: 13px;
-  line-height: 23px;              
-  letter-spacing: 0.1875px;
-  color: #48555B;
-}
+      .about-text, .about-text1 {
+        display: block;
+        width: 100%;
+        max-width: 405.08px;            
+        font-size: 13px;
+        line-height: 23px;              
+        letter-spacing: 0.1875px;
+        color: #48555B;
+      }
 
-/* Правая часть (Три иконки в ряд) */
-.about-features {
-  flex: 1;                        
-  display: flex;                  
-  justify-content: space-between; 
-  gap: 20px;                      
-}
+      /* Правая часть (Три картинки в ряд) */
+      .about-features {
+        flex: 1;                        
+        display: flex;                  
+        justify-content: flex-end; 
+        gap: 16px;                      
+        min-width: 0;                   
+      }
 
-.feature-item {
-  flex: 1;                        
-  display: flex;
-  flex-direction: column;         
-  align-items: center;            
-}
+      .feature-item {
+        flex: 0 1 auto;                   
+        min-width: 0;                   
+        display: flex;
+        flex-direction: column;         
+        align-items: center;            
+      }
 
-.feature-img {
-  width: auto;                    
-  max-width: 100%;
-  height: auto;                   
-}
+      .feature-img {
+        display: block;
+        width: 100%;          
+        max-width: 260px;     /* Оптимальный размер, чтобы три штуки точно влезли на экран */
+        aspect-ratio: 4 / 3;  
+        object-fit: cover;    /* Картинка подстраивается под рамку и не сжимается уродливо */
+        height: auto;        
+      }
 
-/* --- 6. БЛОК SERVICES (НАШИ УСЛУГИ) --- */
-.services {
-  width: 100%;
-  max-width: 1440px;
-  margin: 40px auto;
-}
+      /* --- 6. БЛОК SERVICES --- */
+      .services {
+        width: 100%;
+        max-width: 1440px;
+        margin: 40px auto;
+      }
 
-/* --- 7. БЛОК GET IN TOUCH --- */
-.get-in-touch {
-  position: relative; 
-  width: 100%;
-  max-width: 1440px;
-  margin: 40px auto;
-}
+      /* --- 7. БЛОК GET IN TOUCH --- */
+      .get-in-touch {
+        position: relative; 
+        width: 100%;
+        max-width: 1440px;
+        margin: 40px auto;
+      }
 
-.touch-button {
-  position: absolute;
-  width: 150px;
-  height: 40px;
-  background: #00A4E5;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); 
-  color: #FFFFFF;                  
-  text-decoration: none;           
-  font-size: 14px;                 
-  font-weight: bold;               
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
+      .touch-button {
+        position: absolute;
+        width: 150px;
+        height: 40px;
+        background: #00A4E5;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); 
+        color: #FFFFFF;                  
+        text-decoration: none;           
+        font-size: 14px;                 
+        font-weight: bold;               
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.3s ease, transform 0.2s ease;
+      }
 
-.touch-button:hover {
-  background: #0082b5; 
-  transform: translate(-50%, -50%) scale(1.05); 
-}
+      .touch-button:hover {
+        background: #0082b5; 
+        transform: translate(-50%, -50%) scale(1.05); 
+      }
 
-/* --- 8. БЛОК NEWSLETTER --- */
-.newsletter {
-  position: relative; 
-  width: 100%;
-  max-width: 1440px;
-  margin: 40px auto;
-}
+      /* --- 8. БЛОК NEWSLETTER --- */
+      .newsletter {
+        position: relative; 
+        width: 100%;
+        max-width: 1440px;
+        margin: 40px auto;
+      }
 
-.newsletter img {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: relative;
-  z-index: 1;
-}
+      .newsletter img {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
 
-.newsletter-form {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); 
-  display: flex;
-  align-items: center;
-  gap: 16px; 
-  z-index: 10; 
-}
+      .newsletter-form {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); 
+        display: flex;
+        align-items: center;
+        gap: 16px; 
+        z-index: 10; 
+      }
 
-.newsletter-text {
-  color: #FFFFFF; 
-  font-size: 16px;
-  font-weight: bold;
-}
+      .newsletter-text {
+        color: #FFFFFF; 
+        font-size: 16px;
+        font-weight: bold;
+      }
 
-.newsletter-input {
-  width: 250px;         
-  height: 40px;         
-  padding: 0 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;   
-  font-size: 14px;
-  outline: none;
-  background: #FFFFFF;
-}
+      .newsletter-input {
+        width: 250px;         
+        height: 40px;         
+        padding: 0 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;   
+        font-size: 14px;
+        outline: none;
+        background: #FFFFFF;
+      }
 
-.all-services-btn {
-  width: 150px;           
-  height: 40px;        
-  background: #00A4E5;    
-  color: #FFFFFF;         
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+      .all-services-btn {
+        width: 150px;           
+        height: 40px;        
+        background: #00A4E5;    
+        color: #FFFFFF;         
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
 
-.all-services-btn:hover {
-  background: #0082b5;    
-}
+      .all-services-btn:hover {
+        background: #0082b5;    
+      }
 
-/* --- 9. FOOTER (ПОДВАЛ СЙТА) --- */
-.footer {
-  width: 100%;
-  max-width: 1440px;
-  margin: 40px auto 0 auto;
-}
+      /* --- 9. FOOTER --- */
+      .footer {
+        width: 100%;
+        max-width: 1440px;
+        margin: 40px auto 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="img/header.png" alt="konstuct" />
+    </div>
+
+    <nav class="navbar">
+      <img src="img/projeco-logo-black.png" alt="Логотип" class="navbar-logo" />
+      <div class="nav-links">
+        <a href="#" class="nav-item">HOME</a>
+        <a href="#" class="nav-item">ABOUT</a>
+        <a href="#" class="nav-item">SERVICES</a>
+        <a href="#" class="nav-item">CONTACT</a>
+      </div>
+    </nav>
+
+    <main class="content">
+      <section class="about">
+        <h2 class="about-title">OUR STORY</h2>
+        <div class="about-line"></div>
+        
+        <div class="about-row">
+          <div class="about-content">
+            <p class="about-text1">
+              Founded in 2011 by John Mathew Smith, Konstruct has become the number one construction management firm
+            </p>
+            <p class="about-text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+            </p>
+          </div>
+          
+          <div class="about-features">
+            <div class="feature-item">
+              <img src="img/about-icon1.png" alt="" class="feature-img" />
+            </div>
+            <div class="feature-item">
+              <img src="img/about-icon2.png" alt="" class="feature-img" />
+            </div>
+            <div class="feature-item">
+              <img src="img/about-icon3.png" alt="" class="feature-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <img src="img/services.png" alt="Наши услуги" />
+      </section>
+      
+      <div class="get-in-touch">
+        <img src="img/get-in-touch.png" alt="Фон" />
+        <a href="#" class="touch-button">GET IN TOUCH</a>
+      </div>
+
+      <div class="newsletter">
+        <img src="img/bg.png" alt="Фон подписки" />
+        <form class="newsletter-form">
+          <p class="newsletter-text">Newsletter Signup</p>
+          <input type="email" class="newsletter-input" placeholder="test@youremail.com" required />
+          <button type="submit" class="all-services-btn">SIGNUP</button>
+        </form>
+      </div>
+
+      <div class="footer">
+        <img src="img/footer.png" alt="footer" />
+      </div>
+    </main>
+  </body>
+</html>
