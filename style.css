@@ -1,30 +1,46 @@
-body {
-  background: #FFFFFF;
-  width: 100%;
-  min-height: 100vh;
+/* --- 1. СБРОС СТИЛЕЙ БРАУЗЕРА --- */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Все картинки внутри блоков теперь будут адаптивными и не сломают экран */
+body {
+  background: #FFFFFF;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'OpenSans', sans-serif, Arial; /* Если шрифта OpenSans нет в системе, включится Arial */
+}
+
 img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* --- КРУПНЫЕ БЛОКИ САЙТА --- */
-
-/* Шапка сайта */
+/* --- 2. HEADER (ШАПКА) --- */
 .header {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
 }
 
-/* Навигация — теперь она гарантированно встанет СРАЗУ ПОСЛЕ шапки */
+/* --- 3. NAVBAR (МЕНЮ) --- */
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  width: 100%;
+  max-width: 1440px;              
+  height: 65px;                   
+  margin: 0 auto;                 
+  padding: 24px 250px; 
+}
 
+.navbar-logo {
+  width: 79.53px;
+  height: 18px;
+}
 
 .nav-links {
   display: flex;
@@ -34,130 +50,203 @@ img {
 .nav-item {
   text-decoration: none;          
   color: #000000;                 
-  font-family: sans-serif;        
   font-size: 16px;                
-  font-weight: 500;  
-  transition: color 0.3s ease;             
+  font-weight: 500;               
+  transition: color 0.3s ease; 
 }
+
 .nav-item:hover {
-  color: #00A3FF !important;       /* Голубой цвет из Figma с высшим приоритетом */
-  text-decoration: underline !important; /* Принудительное подчеркивание */
+  color: #00A4E5 !important;
+  text-decoration: underline !important;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;            
-  
-  width: 100%;
-  max-width: 1440px;              
-  height: 65px;                   
-  margin: 0 auto;                 
-  
-  /* Переносим отступы из Figma: */
-  /* padding-top: 24px (как top: 24px) */
-  /* padding-left/right: 250px (как left: 251px, чтобы логотип стоял точно по сетке) */
-  padding: 24px 250px 24px 250px; 
-  
-  box-sizing: border-box; /* Чтобы отступы не увеличивали общую высоту панели */
-}
-
-/* Применяем точные размеры для логотипа из Figma */
-.navbar-logo {
-  width: 79.53px;
-  height: 18px;
-  display: block; /* Убирает лишние зазоры под картинкой */
-}
-
-/* Главный контейнер для всех нижних блоков */
+/* --- 4. ОСНОВНОЙ КОНТЕНТ --- */
 .content {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column; /* Выстраивает блоки строго по очереди вниз */
+  flex-direction: column;
 }
 
-/* Блок About (в Figma он был уже, поэтому центрируем его через margin) */
+/* --- 5. БЛОК ABOUT (О НАШЕЙ ИСТОРИИ) --- */
 .about {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
   width: 100%;
-  max-width: 941px;
-  margin: 40px auto; /* 40px — отступ сверху и снизу, auto — центрирование */
+  max-width: 1440px;              
+  margin: 60px auto;              
+  padding: 0 40px;                
 }
 
-/* Блок Services */
+.about-title {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 2.30625px;
+  color: #48555B;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 8px;      
+}
+
+.about-line {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #00A4E5;
+  margin: 0 auto 40px auto; 
+}
+
+.about-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;                
+}
+
+/* Левая часть (Блок с двумя текстами) */
+.about-content {
+  flex: 0 0 405px;          
+  display: flex;
+  flex-direction: column;   
+  gap: 24px; /* Расстояние между about-text1 и about-text */
+}
+
+.about-text, .about-text1 {
+  display: block;
+  width: 100%;
+  max-width: 405.08px;            
+  font-size: 13px;
+  line-height: 23px;              
+  letter-spacing: 0.1875px;
+  color: #48555B;
+}
+
+/* Правая часть (Три иконки в ряд) */
+.about-features {
+  flex: 1;                        
+  display: flex;                  
+  justify-content: space-between; 
+  gap: 20px;                      
+}
+
+.feature-item {
+  flex: 1;                        
+  display: flex;
+  flex-direction: column;         
+  align-items: center;            
+}
+
+.feature-img {
+  width: auto;                    
+  max-width: 100%;
+  height: auto;                   
+}
+
+/* --- 6. БЛОК SERVICES (НАШИ УСЛУГИ) --- */
 .services {
   width: 100%;
-  max-width: 940px;
+  max-width: 1440px;
   margin: 40px auto;
 }
 
-/* Блок Get in touch */
+/* --- 7. БЛОК GET IN TOUCH --- */
 .get-in-touch {
-  position: relative; /* Включаем этот режим, чтобы кнопка позиционировалась внутри этой картинки */
+  position: relative; 
   width: 100%;
   max-width: 1440px;
   margin: 40px auto;
 }
 
 .touch-button {
-  /* Базовые размеры и цвет из вашего кода Figma */
   position: absolute;
   width: 150px;
   height: 40px;
   background: #00A4E5;
-  
-  /* Размещаем кнопку ровно по центру картинки (по горизонтали и вертикали) */
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); /* Сдвигает кнопку точно в центр */
-
-  /* Оформление текста внутри кнопки */
-  color: #FFFFFF;                  /* Белый цвет текста */
-  text-decoration: none;           /* Убираем подчеркивание */
-  font-family: sans-serif;         /* Шрифт */
-  font-size: 14px;                 /* Размер текста, подстройте под Figma */
-  font-weight: bold;               /* Жирный текст */
-  
-  /* Выравнивание текста строго по центру кнопки */
+  transform: translate(-50%, -50%); 
+  color: #FFFFFF;                  
+  text-decoration: none;           
+  font-size: 14px;                 
+  font-weight: bold;               
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  /* Плавность анимации */
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Эффект при наведении курсора на кнопку */
 .touch-button:hover {
-  background: #0082b5; /* Цвет становится чуть темнее при наведении */
-  transform: translate(-50%, -50%) scale(1.05); /* Кнопка красиво увеличивается на 5% */
+  background: #0082b5; 
+  transform: translate(-50%, -50%) scale(1.05); 
 }
 
-
-
-/* Блок Newsletter */
+/* --- 8. БЛОК NEWSLETTER --- */
 .newsletter {
+  position: relative; 
   width: 100%;
   max-width: 1440px;
   margin: 40px auto;
 }
 
-/* Блок Footer */
+.newsletter img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter-form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+  z-index: 10; 
+}
+
+.newsletter-text {
+  color: #FFFFFF; 
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.newsletter-input {
+  width: 250px;         
+  height: 40px;         
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;   
+  font-size: 14px;
+  outline: none;
+  background: #FFFFFF;
+}
+
+.all-services-btn {
+  width: 150px;           
+  height: 40px;        
+  background: #00A4E5;    
+  color: #FFFFFF;         
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.all-services-btn:hover {
+  background: #0082b5;    
+}
+
+/* --- 9. FOOTER (ПОДВАЛ СЙТА) --- */
 .footer {
   width: 100%;
   max-width: 1440px;
-  margin: 40px auto 0 auto; /* Последний ноль прижмет футер к низу */
-}
-
-
-.projeco-logo-black 
-{
-
-position: absolute;
-width: 79.53px;
-height: 18px;
-left: 251px;
-top: 24px;
-
+  margin: 40px auto 0 auto;
 }

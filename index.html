@@ -33,9 +33,45 @@
 
 
     <main class="content">
-      <div class="about">
-        <img src="img/about.png" alt="Об этом" />
+      <section class="about">
+  <!-- 1. Заголовок теперь на самом верху по центру -->
+  <h2 class="about-title">OUR STORY</h2>
+<div class="about-line"></div>
+  <!-- 2. Контейнер для нижнего ряда (текст + карточки) -->
+  <div class="about-row">
+    
+    <!-- Левая часть: только текст описания -->
+    <div class="about-content">
+      
+      <p class="about-text1">
+        Founded in 2011 by John Mathew Smith, Konstruct has become the number one construction management firm
+      </p>
+      <p class="about-text">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+      </p>
+    </div>
+    
+    <!-- Правая часть: три блока в ряд -->
+    <div class="about-features">
+      <div class="feature-item">
+        <img src="img/about-icon1.png" alt="" class="feature-img" />
+        
       </div>
+      <div class="feature-item">
+        <img src="img/about-icon2.png" alt="" class="feature-img" />
+        
+      </div>
+      <div class="feature-item">
+        <img src="img/about-icon3.png" alt="" class="feature-img" />
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
       <section class="services">
         <img src="img/services.png" alt="Наши услуги" />
       </section>
@@ -48,8 +84,17 @@
 
 
       <div class="newsletter">
-        <img src="img/newsletter.png" alt="Новости" />
-      </div>
+  <!-- Фоновая картинка блока -->
+  <img src="img/bg.png" alt="Фон подписки" />
+
+  <!-- Рабочая форма подписки поверх картинки -->
+  <form class="newsletter-form">
+    <p class="newsletter-text">Newsletter Signup</p>
+    <input type="email" class="newsletter-input" placeholder="test@youremail.com" required />
+    <button type="submit" class="all-services-btn">SIGNUP</button>
+  </form>
+</div>
+
       <div class="footer">
         <img src="img/footer.png" alt="footer" />
       </div>
