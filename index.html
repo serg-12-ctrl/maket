@@ -6,6 +6,9 @@
     <title>Мой сайт</title>
     <!-- Подключаем ваш файл со стилями -->
     <link rel="stylesheet" href="style.css" />
+     <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Пример элемента сайта -->
@@ -53,19 +56,30 @@
     
     <!-- Правая часть: три блока в ряд -->
     <div class="about-features">
-      <div class="feature-item">
-        <img src="img/about-icon1.png" alt="" class="feature-img" />
-        
-      </div>
-      <div class="feature-item">
-        <img src="img/about-icon2.png" alt="" class="feature-img" />
-        
-      </div>
-      <div class="feature-item">
-        <img src="img/about-icon3.png" alt="" class="feature-img" />
-        
-      </div>
+  
+  <!-- Карточка 1: PLAN -->
+  <div class="feature-item plan-card">
+    <div class="feature-overlay">
+      <span class="feature-text-white">WE<br>PLAN</span>
     </div>
+  </div>
+
+  <!-- Карточка 2: MANAGE -->
+  <div class="feature-item manage-card">
+  <div class="feature-overlay">
+    <span class="feature-text-white">WE<br>MANAGE</span>
+  </div>
+</div>
+
+  <!-- Карточка 3: DELIVER (То, что вы скинули в коде) -->
+  <div class="feature-item deliver-card">
+    <div class="feature-overlay">
+      <span class="feature-text-white">WE<br>BUILD</span>
+    </div>
+  </div>
+
+</div>
+
 
   </div>
 </section>

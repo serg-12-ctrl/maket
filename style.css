@@ -1,10 +1,4 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Мой сайт</title>
-    <style>
+
       /* --- 1. СБРОС СТИЛЕЙ БРАУЗЕРА --- */
       * {
         margin: 0;
@@ -13,12 +7,12 @@
       }
 
       body {
-        background: #FFFFFF;
-        width: 100%;
-        min-height: 100vh;
-        font-family: 'Open Sans', sans-serif, Arial;
-        color: #48555B;
-      }
+  background: #FFFFFF;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif; /* Шрифт применится ко всему сайту сразу */
+  color: #48555B;
+}
 
       img {
         width: 100%;
@@ -65,7 +59,7 @@
       }
 
       .nav-item:hover {
-        color: #00A4E5 !important;
+        color: #00A4E5 ;
         text-decoration: underline !important;
       }
 
@@ -134,30 +128,68 @@
       }
 
       /* Правая часть (Три картинки в ряд) */
-      .about-features {
-        flex: 1;                        
-        display: flex;                  
-        justify-content: flex-end; 
-        gap: 16px;                      
-        min-width: 0;                   
-      }
+      /* Правая часть (Контейнер для трех картинок) */
+/* Правая часть (Контейнер для трех карточек) */
+.about-features {
+  flex: 1 !important;              
+  display: flex !important;                  
+  justify-content: flex-end !important; /* Прижимает карточки к правому краю */
+  gap: 30px !important;            /* Расстояние между карточками из Figma (примерно 30px) */
+  min-width: 0 !important;         
+}
 
-      .feature-item {
-        flex: 0 1 auto;                   
-        min-width: 0;                   
-        display: flex;
-        flex-direction: column;         
-        align-items: center;            
-      }
+/* Общий стиль для каждой карточки (из параметров Rectangle 2 и deliver) */
+.feature-item {
+  flex: 0 0 140px !important;      /* Жесткая ширина карточки из Figma (width: 140px) */
+  height: 224px !important;        /* Жесткая высота карточки из Figma (height: 224px) */
+  background-color: #D8D8D8 !important; /* Базовый цвет из Figma (Rectangle 2) */
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.3) !important; /* Тень из Figma */
+  
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative !important;   /* Чтобы текст внутри позиционировался абсолютно */
+  overflow: hidden !important;     /* Работает как маска в Figma — обрезает картинку по размерам карточки */
+}
 
-      .feature-img {
-        display: block;
-        width: 100%;          
-        max-width: 260px;     /* Оптимальный размер, чтобы три штуки точно влезли на экран */
-        aspect-ratio: 4 / 3;  
-        object-fit: cover;    /* Картинка подстраивается под рамку и не сжимается уродливо */
-        height: auto;        
-      }
+/* Подключаем фоновые картинки (Bitmap) для каждой карточки отдельно */
+.plan-card {
+  background-image: url('img/about-icon1.png') !important;
+}
+.manage-card {
+  background-image: url('img/about-icon2.png') !important;
+}
+.deliver-card {
+  background-image: url('img/about-icon3.png') !important; /* Ваша Image.png (about-icon3) */
+}
+
+/* Полупрозрачный слой поверх картинки, чтобы белый текст лучше читался (если нужно) */
+.feature-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15); /* Легкое затемнение */
+  padding: 15px 14px; /* Отступы из Figma (left: 14px, top: 15px) */
+}
+
+/* Белый текст «WE BUILD» / «WE PLAN» / «WE MANAGE» */
+.feature-text-white {
+  position: absolute;
+  left: 14px;                      /* Координаты текста из Figma */
+  top: 15px;                       /* Координаты текста из Figma */
+  width: 76px;                     /* Ширина текстового блока из Figma */
+  height: 58px;                    /* Высота текстового блока из Figma */
+  
+  font-family: 'OpenSans', sans-serif !important;
+  font-size: 24px !important;      /* Размер шрифта из Figma */
+  line-height: 29px !important;    /* Межстрочный интервал из Figma */
+  letter-spacing: 0.1875px !important;
+  color: #FFFFFF !important;       /* Белый цвет из Figma */
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
 
       /* --- 6. БЛОК SERVICES --- */
       .services {
@@ -171,7 +203,7 @@
         position: relative; 
         width: 100%;
         max-width: 1440px;
-        margin: 40px auto;
+        margin: 0 auto !important; 
       }
 
       .touch-button {
@@ -202,7 +234,7 @@
         position: relative; 
         width: 100%;
         max-width: 1440px;
-        margin: 40px auto;
+        margin: 0 auto !important; 
       }
 
       .newsletter img {
@@ -262,75 +294,6 @@
       .footer {
         width: 100%;
         max-width: 1440px;
-        margin: 40px auto 0 auto;
+        margin: 0 auto !important; 
       }
-    </style>
-  </head>
-  <body>
-    <div class="header">
-      <img src="img/header.png" alt="konstuct" />
-    </div>
-
-    <nav class="navbar">
-      <img src="img/projeco-logo-black.png" alt="Логотип" class="navbar-logo" />
-      <div class="nav-links">
-        <a href="#" class="nav-item">HOME</a>
-        <a href="#" class="nav-item">ABOUT</a>
-        <a href="#" class="nav-item">SERVICES</a>
-        <a href="#" class="nav-item">CONTACT</a>
-      </div>
-    </nav>
-
-    <main class="content">
-      <section class="about">
-        <h2 class="about-title">OUR STORY</h2>
-        <div class="about-line"></div>
-        
-        <div class="about-row">
-          <div class="about-content">
-            <p class="about-text1">
-              Founded in 2011 by John Mathew Smith, Konstruct has become the number one construction management firm
-            </p>
-            <p class="about-text">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
-            </p>
-          </div>
-          
-          <div class="about-features">
-            <div class="feature-item">
-              <img src="img/about-icon1.png" alt="" class="feature-img" />
-            </div>
-            <div class="feature-item">
-              <img src="img/about-icon2.png" alt="" class="feature-img" />
-            </div>
-            <div class="feature-item">
-              <img src="img/about-icon3.png" alt="" class="feature-img" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="services">
-        <img src="img/services.png" alt="Наши услуги" />
-      </section>
-      
-      <div class="get-in-touch">
-        <img src="img/get-in-touch.png" alt="Фон" />
-        <a href="#" class="touch-button">GET IN TOUCH</a>
-      </div>
-
-      <div class="newsletter">
-        <img src="img/bg.png" alt="Фон подписки" />
-        <form class="newsletter-form">
-          <p class="newsletter-text">Newsletter Signup</p>
-          <input type="email" class="newsletter-input" placeholder="test@youremail.com" required />
-          <button type="submit" class="all-services-btn">SIGNUP</button>
-        </form>
-      </div>
-
-      <div class="footer">
-        <img src="img/footer.png" alt="footer" />
-      </div>
-    </main>
-  </body>
-</html>
+    
