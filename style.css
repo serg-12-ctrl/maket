@@ -111,21 +111,36 @@
 
       /* Левая часть (Текст) */
       .about-content {
-        flex: 0 0 405px;          
-        display: flex;
-        flex-direction: column;   
-        gap: 24px; 
-      }
+  flex: 0 0 405.08px !important;  /* Точная ширина текстового блока из Figma */
+  display: flex !important;
+  flex-direction: column !important; 
+  gap: 30px !important;            /* Расстояние между текстами (рассчитано из Figma: top 227px - top 116px - height 81px = 30px) */
+}
 
-      .about-text, .about-text1 {
-        display: block;
-        width: 100%;
-        max-width: 405.08px;            
-        font-size: 13px;
-        line-height: 23px;              
-        letter-spacing: 0.1875px;
-        color: #48555B;
-      }
+/* --- ПЕРВЫЙ ТЕКСТ (Founded...) --- */
+.about-text {
+  display: block !important;
+  width: 100% !important;
+  max-width: 405.08px !important;            
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 20px !important;       /* ВАЖНО: Крупный размер из Figma (20px) */
+  line-height: 23px !important;     
+  letter-spacing: 0.1875px !important;
+  color: #48555B !important;        
+}
+
+/* --- ВТОРОЙ ТЕКСТ (Lorem ipsum...) --- */
+.about-text1 {
+  display: block !important;
+  width: 100% !important;
+  max-width: 405.08px !important;            
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 13px !important;       /* ВАЖНО: Мелкий размер из Figma (13px) */
+  line-height: 23px !important;     
+  letter-spacing: 0.1875px !important;
+  color: #48555B !important;        
+}
+
 
       /* Правая часть (Три картинки в ряд) */
       /* Правая часть (Контейнер для трех картинок) */
@@ -231,11 +246,11 @@
 
       /* --- 8. БЛОК NEWSLETTER --- */
       .newsletter {
-        position: relative; 
-        width: 100%;
-        max-width: 1440px;
-        margin: 0 auto !important; 
-      }
+  position: relative; 
+  width: 100%;
+  max-width: 1440px;
+  margin: -1px auto 0 auto !important; /* Сдвигает блок на 1 пиксель вверх, перекрывая щель */
+}
 
       .newsletter img {
         width: 100%;
@@ -292,8 +307,8 @@
 
       /* --- 9. FOOTER --- */
       .footer {
-        width: 100%;
-        max-width: 1440px;
-        margin: 0 auto !important; 
-      }
+  width: 100%;
+  max-width: 1440px;
+  margin: -1px auto 0 auto !important; /* Сдвигает футер на 1 пиксель вверх */
+}
     

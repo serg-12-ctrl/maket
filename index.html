@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Мой сайт</title>
-    <!-- Подключаем ваш файл со стилями -->
+
     <link rel="stylesheet" href="style.css" />
-     <link rel="preconnect" href="https://googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Пример элемента сайта -->
@@ -17,97 +14,81 @@
     </div>
 
     <nav class="navbar">
-  <!-- Вставляем отдельно вырезанную картинку -->
-  <img src="img/projeco-logo-black.png" alt="Логотип" class="navbar-logo" />
+      <!-- Вставляем отдельно вырезанную картинку -->
+      <img src="img/projeco-logo-black.png" alt="Логотип" class="navbar-logo" />
 
-  <!-- Ваши текстовые ссылки -->
-  <div class="nav-links">
-    <a href="#" class="nav-item">HOME</a>
-    <a href="#" class="nav-item">ABOUT</a>
-    <a href="#" class="nav-item">SERVICES</a>
-    <a href="#" class="nav-item">CONTACT</a>
-  </div>
-</nav>
-
-
-
-
-
-
+      <div class="nav-links">
+        <a href="#" class="nav-item">HOME</a>
+        <a href="#" class="nav-item">ABOUT</a>
+        <a href="#" class="nav-item">SERVICES</a>
+        <a href="#" class="nav-item">CONTACT</a>
+      </div>
+    </nav>
 
     <main class="content">
       <section class="about">
-  <!-- 1. Заголовок теперь на самом верху по центру -->
-  <h2 class="about-title">OUR STORY</h2>
-<div class="about-line"></div>
-  <!-- 2. Контейнер для нижнего ряда (текст + карточки) -->
-  <div class="about-row">
-    
-    <!-- Левая часть: только текст описания -->
-    <div class="about-content">
-      
-      <p class="about-text1">
-        Founded in 2011 by John Mathew Smith, Konstruct has become the number one construction management firm
-      </p>
-      <p class="about-text">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
-      </p>
-    </div>
-    
-    <!-- Правая часть: три блока в ряд -->
-    <div class="about-features">
-  
-  <!-- Карточка 1: PLAN -->
-  <div class="feature-item plan-card">
-    <div class="feature-overlay">
-      <span class="feature-text-white">WE<br>PLAN</span>
-    </div>
-  </div>
+        <h2 class="about-title">OUR STORY</h2>
+        <div class="about-line"></div>
 
-  <!-- Карточка 2: MANAGE -->
-  <div class="feature-item manage-card">
-  <div class="feature-overlay">
-    <span class="feature-text-white">WE<br>MANAGE</span>
-  </div>
+        <div class="about-row">
+          <div class="about-content">
+  <p class="about-text">
+    Founded in 2011 by John Mathew Smith, Konstruct has become the number one construction management firm
+  </p>
+  <p class="about-text1">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat...
+  </p>
 </div>
 
-  <!-- Карточка 3: DELIVER (То, что вы скинули в коде) -->
-  <div class="feature-item deliver-card">
-    <div class="feature-overlay">
-      <span class="feature-text-white">WE<br>BUILD</span>
-    </div>
-  </div>
+          <!-- Правая часть: три блока в ряд -->
+          <div class="about-features">
+            <!-- Карточка 1: PLAN -->
+            <div class="feature-item plan-card">
+              <div class="feature-overlay">
+                <span class="feature-text-white">WE<br />PLAN</span>
+              </div>
+            </div>
 
-</div>
+            <!-- Карточка 2: MANAGE -->
+            <div class="feature-item manage-card">
+              <div class="feature-overlay">
+                <span class="feature-text-white">WE<br />MANAGE</span>
+              </div>
+            </div>
 
-
-  </div>
-</section>
-
-
+            <!-- Карточка 3: DELIVER (То, что вы скинули в коде) -->
+            <div class="feature-item deliver-card">
+              <div class="feature-overlay">
+                <span class="feature-text-white">WE<br />BUILD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="services">
         <img src="img/services.png" alt="Наши услуги" />
       </section>
       <div class="get-in-touch">
-  <img src="img/get-in-touch.png" alt="Фон" />
-  
-  <!-- Добавляем живую кнопку поверх картинки -->
-  <a href="#" class="touch-button">GET IN TOUCH</a>
-</div>
+        <img src="img/get-in-touch.png" alt="Фон" />
 
+        <a href="#" class="touch-button">GET IN TOUCH</a>
+      </div>
 
       <div class="newsletter">
-  <!-- Фоновая картинка блока -->
-  <img src="img/bg.png" alt="Фон подписки" />
+        <img src="img/bg.png" alt="Фон подписки" />
 
-  <!-- Рабочая форма подписки поверх картинки -->
-  <form class="newsletter-form">
-    <p class="newsletter-text">Newsletter Signup</p>
-    <input type="email" class="newsletter-input" placeholder="test@youremail.com" required />
-    <button type="submit" class="all-services-btn">SIGNUP</button>
-  </form>
-</div>
+        <form class="newsletter-form">
+          <p class="newsletter-text">Newsletter Signup</p>
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="test@youremail.com"
+            required
+          />
+          <button type="submit" class="all-services-btn">SIGNUP</button>
+        </form>
+      </div>
 
       <div class="footer">
         <img src="img/footer.png" alt="footer" />
