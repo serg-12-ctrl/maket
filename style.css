@@ -10,7 +10,7 @@
   background: #FFFFFF;
   width: 100%;
   min-height: 100vh;
-  font-family: 'Open Sans', sans-serif; /* Шрифт применится ко всему сайту сразу */
+  font-family: 'Open Sans', sans-serif; 
   color: #48555B;
 }
 
@@ -111,10 +111,10 @@
 
       /* Левая часть (Текст) */
       .about-content {
-  flex: 0 0 405.08px !important;  /* Точная ширина текстового блока из Figma */
+  flex: 0 0 405.08px !important;  
   display: flex !important;
   flex-direction: column !important; 
-  gap: 30px !important;            /* Расстояние между текстами (рассчитано из Figma: top 227px - top 116px - height 81px = 30px) */
+  gap: 30px !important;           
 }
 
 /* --- ПЕРВЫЙ ТЕКСТ (Founded...) --- */
@@ -123,7 +123,7 @@
   width: 100% !important;
   max-width: 405.08px !important;            
   font-family: 'Open Sans', sans-serif !important;
-  font-size: 20px !important;       /* ВАЖНО: Крупный размер из Figma (20px) */
+  font-size: 20px !important;       
   line-height: 23px !important;     
   letter-spacing: 0.1875px !important;
   color: #48555B !important;        
@@ -135,38 +135,36 @@
   width: 100% !important;
   max-width: 405.08px !important;            
   font-family: 'Open Sans', sans-serif !important;
-  font-size: 13px !important;       /* ВАЖНО: Мелкий размер из Figma (13px) */
+  font-size: 13px !important;       
   line-height: 23px !important;     
   letter-spacing: 0.1875px !important;
   color: #48555B !important;        
 }
 
 .text-accent {
-  font-weight: 600 !important;      /* Делает слово очень жирным (Extra Bold) */
+  font-weight: 600 !important;     
   color: #00A4E5 !important; 
 }
-      /* Правая часть (Три картинки в ряд) */
-      /* Правая часть (Контейнер для трех картинок) */
-/* Правая часть (Контейнер для трех карточек) */
+      
 .about-features {
   flex: 1 !important;              
   display: flex !important;                  
-  justify-content: flex-end !important; /* Прижимает карточки к правому краю */
-  gap: 30px !important;            /* Расстояние между карточками из Figma (примерно 30px) */
+  justify-content: flex-end !important; 
+  gap: 30px !important;           
   min-width: 0 !important;         
 }
 
 /* Общий стиль для каждой карточки (из параметров Rectangle 2 и deliver) */
 .feature-item {
-  flex: 0 0 140px !important;      /* Жесткая ширина карточки из Figma (width: 140px) */
-  height: 224px !important;        /* Жесткая высота карточки из Figma (height: 224px) */
-  background-color: #D8D8D8 !important; /* Базовый цвет из Figma (Rectangle 2) */
-  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.3) !important; /* Тень из Figma */
+  flex: 0 0 140px !important;      
+  height: 224px !important;       
+  background-color: #D8D8D8 !important; 
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.3) !important; 
   
   background-size: cover !important;
   background-position: center !important;
-  position: relative !important;   /* Чтобы текст внутри позиционировался абсолютно */
-  overflow: hidden !important;     /* Работает как маска в Figma — обрезает картинку по размерам карточки */
+  position: relative !important;   
+  overflow: hidden !important;     
 }
 
 /* Подключаем фоновые картинки (Bitmap) для каждой карточки отдельно */
@@ -177,21 +175,21 @@
   background-image: url('img/about-icon2.png') !important;
 }
 .deliver-card {
-  background-image: url('img/about-icon3.png') !important; /* Ваша Image.png (about-icon3) */
+  background-image: url('img/about-icon3.png') !important; 
 }
 
-/* Полупрозрачный слой поверх картинки, чтобы белый текст лучше читался (если нужно) */
+/
 .feature-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.15); /* Легкое затемнение */
-  padding: 15px 14px; /* Отступы из Figma (left: 14px, top: 15px) */
+  background: rgba(0, 0, 0, 0.15);
+  padding: 15px 14px; 
 }
 
-/* Белый текст «WE BUILD» / «WE PLAN» / «WE MANAGE» */
+
 
 .feature-text-white {
   position: absolute !important;
@@ -225,14 +223,14 @@
         padding: 0 40px !important;
         display: flex !important;
         flex-direction: column !important;
-        gap: 50px !important; /* Отступ между первой строкой и карточками */
+        gap: 50px !important; 
       }
 
       /* Первая строка: заголовок, описание, кнопка */
       .services-row1 {
         width: 100% !important;
         display: flex !important;
-        justify-content: space-between !important; /* Распределяет элементы по краям */
+        justify-content: space-between !important; 
         align-items: flex-start !important;
         gap: 40px !important;
       }
@@ -246,7 +244,7 @@
       }
 
       .services-title {
-        position: static !important; /* УБИРАЕТ СЪЕЗЖАНИЕ В УГОЛ */
+        position: static !important; 
         width: auto !important;
         height: auto !important;
         font-family: 'Open Sans', sans-serif !important;
@@ -259,7 +257,7 @@
       }
 
       .services-line {
-        position: static !important; /* УБИРАЕТ СЪЕЗЖАНИЕ В УГОЛ */
+        position: static !important; 
         width: 50px !important;
         height: 2px !important;
         background-color: #00A4E5 !important;
@@ -268,10 +266,10 @@
 
       /* Описание (Lorem ipsum) в первой строке */
       .services-text1 {
-        position: static !important; /* УБИРАЕТ СЪЕЗЖАНИЕ В УГОЛ */
+        position: static !important; 
         width: auto !important;
         height: auto !important;
-        flex: 0 0 405.4px !important; /* Точная ширина текстового блока */
+        flex: 0 0 405.4px !important; 
         font-family: 'Open Sans', sans-serif !important;
         font-size: 13px !important;
         line-height: 23px !important;
@@ -296,32 +294,39 @@
 
       .all-services-btn:hover {
         background: #0082b5 !important; 
-        transform: scale(1.05) !important; /* Плавное увеличение, как у get-in-touch */
+        transform: scale(1.05) !important; 
       }
 
       /* ВТОРАЯ СТРОКА: ТРИ КАРТОЧКИ В РЯД */
       .services-row2 {
         display: flex !important;
-        flex-direction: row !important; /* Выстраивает карточки строго горизонтально */
+        flex-direction: row !important; 
         justify-content: space-between !important;
         gap: 30px !important;
         width: 100% !important;
       }
 
-      /* Каждая отдельная карточка услуг */
-      .services-item-card {
-        /* Каждая отдельная карточка услуг (настройки из Figma) */
+    
+      
 .services-item-card {
-  flex: 0 1 295px !important;  /* Точная ширина карточки из Figma (295px) */
-  min-height: 330px !important; /* Точная высота карточки из Figma (330px) */
+  flex: 0 1 295px !important;     
+  min-height: 330px !important;    
+  
+  background: #FFFFFF !important;  
+  border: 1px solid #E6E6E6 !important; 
+  box-sizing: border-box !important;
   
   display: flex !important;
-  flex-direction: column !important; /* Элементы внутри идут строго сверху вниз */
-  align-items: flex-start !important; /* Прижимаем контент к левому краю карточки */
+  flex-direction: column !important; 
+  align-items: flex-start !important; 
+  
+  
+  padding: 30px 25px !important;  
   position: relative !important;
 }
 
-      }
+
+      
 
       /* Контейнер для иконок-картинок */
       .img-services {
@@ -338,7 +343,7 @@
 
       /* Жирный заголовок внутри карточки */
       .services-bold-text {
-        position: static !important; /* УБИРАЕТ СЪЕЗЖАНИЕ В УГОЛ */
+        position: static !important; 
         width: auto !important;
         height: auto !important;
         font-family: 'Open Sans', sans-serif !important;
@@ -352,7 +357,7 @@
 
       /* Описание под жирным заголовком */
       .services-text-text {
-        position: static !important; /* УБИРАЕТ СЪЕЗЖАНИЕ В УГОЛ */
+        position: static !important;
         width: auto !important;
         height: auto !important;
         font-family: 'Open Sans', sans-serif !important;
@@ -365,7 +370,7 @@
 
 
 
-/* Стиль для кнопки подписки (чтобы она не ломалась) */
+
 .signup-btn {
   width: 150px;
   height: 40px;
@@ -417,7 +422,7 @@
   position: relative; 
   width: 100%;
   max-width: 1440px;
-  margin: -1px auto 0 auto !important; /* Сдвигает блок на 1 пиксель вверх, перекрывая щель */
+  margin: -1px auto 0 auto !important; 
 }
 
       .newsletter img {
@@ -477,6 +482,6 @@
       .footer {
   width: 100%;
   max-width: 1440px;
-  margin: -1px auto 0 auto !important; /* Сдвигает футер на 1 пиксель вверх */
+  margin: -1px auto 0 auto !important; 
 }
     
