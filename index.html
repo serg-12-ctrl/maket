@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Мой сайт</title>
+    <title>Мой site</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -32,14 +32,18 @@
 
         <div class="about-row">
           <div class="about-content">
-  <p class="about-text">
-  Founded in 2011 by John Mathew Smith, <span class="text-accent">Konstruct</span> has become the number one construction management firm
-</p>
+            <p class="about-text">
+              Founded in 2011 by John Mathew Smith,
+              <span class="text-accent">Konstruct</span> has become the number
+              one construction management firm
+            </p>
 
-  <p class="about-text1">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat...
-  </p>
-</div>
+            <p class="about-text1">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat...
+            </p>
+          </div>
 
           <!-- Правая часть: три блока в ряд -->
           <div class="about-features">
@@ -57,7 +61,7 @@
               </div>
             </div>
 
-            <!-- Карточка 3: DELIVER (То, что вы скинули в коде) -->
+            <!-- Карточка 3: DELIVER -->
             <div class="feature-item deliver-card">
               <div class="feature-overlay">
                 <span class="feature-text-white">WE<br />BUILD</span>
@@ -68,8 +72,72 @@
       </section>
 
       <section class="services">
-        <img src="img/services.png" alt="Наши услуги" />
+        <!-- ПЕРВАЯ СТРОКА: Заголовок, описание и синяя кнопка -->
+        <div class="services-row1">
+          <div class="services-column-capabilites">
+            <h2 class="services-title">OUR CAPABILITES</h2>
+            <div class="services-line"></div>
+          </div>
+
+          <p class="services-text1">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+          </p>
+
+          <a href="#" class="all-services-btn">ALL SERVICES</a>
+        </div>
+        <!-- ЗДЕСЬ СТРОКА СТРОГО ЗАКРЫВАЕТСЯ! -->
+
+        <!-- ВТОРАЯ СТРОКА: ТРИ КАРТОЧКИ В РЯД -->
+        <div class="services-row2">
+          <!-- Карточка 1 -->
+          <div class="services-item-card">
+            <div class="img-services">
+              <img src="img/Services_Bitmap1.png" alt="Management" />
+            </div>
+            <h2 class="services-bold-text">
+              PROJECT AND CONSTRUCTION MANAGEMENT
+            </h2>
+            <p class="services-text-text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat.
+            </p>
+          </div>
+
+          <!-- Карточка 2 -->
+          <div class="services-item-card">
+            <div class="img-services">
+              <img src="img/Services_Bitmap2.png" alt="Audit" />
+            </div>
+            <h2 class="services-bold-text">STRUCTURE AUDIT AND MAINTENANCE</h2>
+            <p class="services-text-text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat.
+            </p>
+          </div>
+
+          <!-- Карточка 3 -->
+          <div class="services-item-card">
+            <div class="img-services">
+              <img src="img/Services_Bitmap3.png" alt="Modeling" />
+            </div>
+            <h2 class="services-bold-text">
+              FACTORY CONSTRUCTION AND MODELING
+            </h2>
+            <p class="services-text-text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat.
+            </p>
+          </div>
+        </div>
+        <!-- Закрытие второй строки -->
+
+        
       </section>
+
       <div class="get-in-touch">
         <img src="img/get-in-touch.png" alt="Фон" />
 
@@ -87,7 +155,8 @@
             placeholder="test@youremail.com"
             required
           />
-          <button type="submit" class="all-services-btn">SIGNUP</button>
+          <!-- ИСПРАВЛЕНО: Дали уникальный класс signup-btn для формы подписки -->
+          <button type="submit" class="signup-btn">SIGNUP</button>
         </form>
       </div>
 

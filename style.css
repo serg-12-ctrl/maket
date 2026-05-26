@@ -192,29 +192,194 @@
 }
 
 /* Белый текст «WE BUILD» / «WE PLAN» / «WE MANAGE» */
+
 .feature-text-white {
-  position: absolute;
-  left: 14px;                      /* Координаты текста из Figma */
-  top: 15px;                       /* Координаты текста из Figma */
-  width: 76px;                     /* Ширина текстового блока из Figma */
-  height: 58px;                    /* Высота текстового блока из Figma */
+  position: absolute !important;
+  left: 14px !important;           
+  top: 15px !important;            
+  width: 76px !important;          
+  height: 58px !important;                    
   
-  font-family: 'OpenSans', sans-serif !important;
-  font-size: 24px !important;      /* Размер шрифта из Figma */
-  line-height: 29px !important;    /* Межстрочный интервал из Figma */
+  font-family: 'Open Sans', Arial, sans-serif !important;
+  font-size: 24px !important;      
+  line-height: 29px !important;    
   letter-spacing: 0.1875px !important;
-  color: #FFFFFF !important;       /* Белый цвет из Figma */
-  font-weight: bold !important;
-  text-transform: uppercase;
+  color: #FFFFFF !important;       
+  font-weight: 700 !important;      
+  text-transform: uppercase !important;
+  
+  
+  text-shadow: none !important;                
+  -webkit-font-smoothing: antialiased !important;  
+  -moz-osx-font-smoothing: grayscale !important;  
+  text-rendering: optimizeLegibility !important; 
 }
 
 
-      /* --- 6. БЛОК SERVICES --- */
+
+                  /* --- 6. БЛОК SERVICES --- */
       .services {
-        width: 100%;
-        max-width: 1440px;
-        margin: 40px auto;
+        width: 100% !important;
+        max-width: 1440px !important;
+        margin: 60px auto !important;
+        padding: 0 40px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 50px !important; /* Отступ между первой строкой и карточками */
       }
+
+      /* Первая строка: заголовок, описание, кнопка */
+      .services-row1 {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important; /* Распределяет элементы по краям */
+        align-items: flex-start !important;
+        gap: 40px !important;
+      }
+
+      /* Блок заголовка OUR CAPABILITIES и синей линии */
+      .services-column-capabilites {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        flex: 0 0 200px !important;
+      }
+
+      .services-title {
+        position: static !important; /* УБИРАЕТ СЪЕЗЖАНИЕ В УГОЛ */
+        width: auto !important;
+        height: auto !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 18px !important;
+        line-height: 21px !important;
+        letter-spacing: 2.30625px !important;
+        color: #48555B !important;
+        text-transform: uppercase !important;
+        margin-bottom: 8px !important;
+      }
+
+      .services-line {
+        position: static !important; /* УБИРАЕТ СЪЕЗЖАНИЕ В УГОЛ */
+        width: 50px !important;
+        height: 2px !important;
+        background-color: #00A4E5 !important;
+        border: none !important;
+      }
+
+      /* Описание (Lorem ipsum) в первой строке */
+      .services-text1 {
+        position: static !important; /* УБИРАЕТ СЪЕЗЖАНИЕ В УГОЛ */
+        width: auto !important;
+        height: auto !important;
+        flex: 0 0 405.4px !important; /* Точная ширина текстового блока */
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 13px !important;
+        line-height: 23px !important;
+        letter-spacing: 0.2px !important;
+        color: #48555B !important;
+      }
+
+      /* Кнопка ALL SERVICES */
+      .all-services-btn {
+        width: 150px !important;
+        height: 40px !important;
+        background: #00A4E5 !important;
+        color: #FFFFFF !important;                  
+        text-decoration: none !important;           
+        font-size: 14px !important;                 
+        font-weight: bold !important;               
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        transition: background 0.3s ease, transform 0.2s ease !important;
+      }
+
+      .all-services-btn:hover {
+        background: #0082b5 !important; 
+        transform: scale(1.05) !important; /* Плавное увеличение, как у get-in-touch */
+      }
+
+      /* ВТОРАЯ СТРОКА: ТРИ КАРТОЧКИ В РЯД */
+      .services-row2 {
+        display: flex !important;
+        flex-direction: row !important; /* Выстраивает карточки строго горизонтально */
+        justify-content: space-between !important;
+        gap: 30px !important;
+        width: 100% !important;
+      }
+
+      /* Каждая отдельная карточка услуг */
+      .services-item-card {
+        /* Каждая отдельная карточка услуг (настройки из Figma) */
+.services-item-card {
+  flex: 0 1 295px !important;  /* Точная ширина карточки из Figma (295px) */
+  min-height: 330px !important; /* Точная высота карточки из Figma (330px) */
+  
+  display: flex !important;
+  flex-direction: column !important; /* Элементы внутри идут строго сверху вниз */
+  align-items: flex-start !important; /* Прижимаем контент к левому краю карточки */
+  position: relative !important;
+}
+
+      }
+
+      /* Контейнер для иконок-картинок */
+      .img-services {
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 15px !important;
+      }
+
+      .img-services img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+      }
+
+      /* Жирный заголовок внутри карточки */
+      .services-bold-text {
+        position: static !important; /* УБИРАЕТ СЪЕЗЖАНИЕ В УГОЛ */
+        width: auto !important;
+        height: auto !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 16px !important;
+        line-height: 24px !important;
+        font-weight: 700 !important;
+        color: #48555B !important;
+        margin: 15px 0 10px 0 !important;
+        text-align: left !important;
+      }
+
+      /* Описание под жирным заголовком */
+      .services-text-text {
+        position: static !important; /* УБИРАЕТ СЪЕЗЖАНИЕ В УГОЛ */
+        width: auto !important;
+        height: auto !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 13px !important;
+        line-height: 22px !important;
+        color: #48555B !important;
+        text-align: left !important;
+      }
+
+
+
+
+/* Стиль для кнопки подписки (чтобы она не ломалась) */
+.signup-btn {
+  width: 150px;
+  height: 40px;
+  background: #00A4E5;
+  color: #FFFFFF;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
 
       /* --- 7. БЛОК GET IN TOUCH --- */
       .get-in-touch {
